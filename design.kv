@@ -1,0 +1,40 @@
+<Sc>:
+	GridLayout:
+		cols:1
+		padding: 15,15
+		spacing: 20,20
+		Label:
+			text:"Binary Calculator"
+		TextInput:
+			id:calculation
+		GridLayout:
+			cols:4
+    		Button:
+    			text:"1"
+				on_press:root.one(root.ids.calculation.text)
+    		Button:
+    			text:"0"
+				on_press:root.zero(root.ids.calculation.text)
+			Button:
+    			text:"C"
+				on_press:root.clear(root.ids.calculation.text)
+			Button:
+    			text:"="
+				on_press:root.equal(root.ids.calculation.text)
+		GridLayout:
+			cols:4
+			Button:
+    			text:"+"
+				on_press:root.plus(root.ids.calculation.text)
+			Button:
+    			text:"-"
+				on_press:root.minus(root.ids.calculation.text)
+			Button:
+    			text:"/"
+				on_press:root.divide(root.ids.calculation.text)
+			Button:
+    			text:"X"
+				on_press:root.multiplication(root.ids.calculation.text)
+<RootWidget>:
+    Sc:
+        name:"home"
